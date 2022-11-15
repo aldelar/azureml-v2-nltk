@@ -1,0 +1,14 @@
+$schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
+type: pipeline
+display_name: amlv2-nltk
+compute: azureml:cpu-cluster
+settings:
+  force_rerun: true
+
+jobs:
+
+  training:
+    type: command
+    code: training
+    command: python training.py
+    environment: azureml:amlv2-nltk@latest

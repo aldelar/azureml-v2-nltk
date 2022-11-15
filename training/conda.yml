@@ -1,0 +1,12 @@
+name: amlv2-nltk
+channels:
+- conda-forge
+dependencies:
+- pip
+- python=3.9
+- pip:
+  - azureml-core
+  - azureml-dataprep
+  - mlflow
+  - pandas
+  - nltk
